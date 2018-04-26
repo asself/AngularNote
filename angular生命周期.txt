@@ -1,4 +1,4 @@
-    constructor
+ï»¿    constructor
     ngChanges
     ngOnInit
     ngDoCheck
@@ -11,46 +11,56 @@
    These phases are broadly split up into phases that
    are linked to the component itself and phases that
    are linked to the children of that component.
-   ÕâĞ©½×¶Î´óÖÂ·ÖÎªÁ´½Óµ½×é¼ş±¾ÉíµÄ½×¶ÎºÍÁ´½Óµ½¸Ã×é¼ş×ÓÏîµÄ½×¶Î¡£
+   è¿™äº›é˜¶æ®µå¤§è‡´åˆ†ä¸ºé“¾æ¥åˆ°ç»„ä»¶æœ¬èº«çš„é˜¶æ®µå’Œé“¾æ¥åˆ°è¯¥ç»„ä»¶å­é¡¹çš„é˜¶æ®µã€‚
    
 
-×é¼ş¹³×Ó:
-   Ò»¡¢constructor
+ç»„ä»¶é’©å­:
+   ä¸€ã€constructor
 
    This is invoked when Angular creates a component or directive by calling new on the class.
-   µ±AngularÍ¨¹ıÔÚÀàÉÏµ÷ÓÃnewÀ´´´½¨Ò»¸ö×é¼ş»òÖ¸ÁîÊ±£¬»áµ÷ÓÃËü¡£
+   å½“Angularé€šè¿‡åœ¨ç±»ä¸Šè°ƒç”¨newæ¥åˆ›å»ºä¸€ä¸ªç»„ä»¶æˆ–æŒ‡ä»¤æ—¶ï¼Œä¼šè°ƒç”¨å®ƒã€‚
 
-   ¶ş¡¢ngOnChanges
+   äºŒã€ngOnChanges
    Invoked every time there is a change in one of th input properties of the component.
-   Ã¿µ±×é¼şµÄÄ³¸öÊäÈëÊôĞÔ·¢Éú±ä»¯Ê±µ÷ÓÃ¡£
+   æ¯å½“ç»„ä»¶çš„æŸä¸ªè¾“å…¥å±æ€§å‘ç”Ÿå˜åŒ–æ—¶è°ƒç”¨ã€‚
    
-   Èı¡¢ngOnInit
+   ä¸‰ã€ngOnInit
      Invoked when given component has been initialized.
      This hook is only called once after the first ngOnChanges
     
-     µ±¸ø¶¨×é¼ş±»³õÊ¼»¯Ê±µ÷ÓÃ¡£
-     ¸Ã¹³×ÓÔÚµÚÒ»¸öngOnChangesÖ®ºó½ö±»µ÷ÓÃÒ»´Î
-   ËÄ¡¢ngDoCheck
+     å½“ç»™å®šç»„ä»¶è¢«åˆå§‹åŒ–æ—¶è°ƒç”¨ã€‚
+     è¯¥é’©å­åœ¨ç¬¬ä¸€ä¸ªngOnChangesä¹‹åä»…è¢«è°ƒç”¨ä¸€æ¬¡
+   å››ã€ngDoCheck
      Invoked when the change detector of the given component is invoked.
      It allows us to implement our own change detection algorithm for the given component.
      
-     µ±µ÷ÓÃ¸ø¶¨×é¼şµÄ±ä»¯¼ì²âÆ÷Ê±µ÷ÓÃ¡£ËüÔÊĞíÎÒÃÇÎª¸ø¶¨µÄ×é¼şÊµÏÖÎÒÃÇ×Ô¼ºµÄ±ä»¯¼ì²âËã·¨
+     å½“è°ƒç”¨ç»™å®šç»„ä»¶çš„å˜åŒ–æ£€æµ‹å™¨æ—¶è°ƒç”¨ã€‚å®ƒå…è®¸æˆ‘ä»¬ä¸ºç»™å®šçš„ç»„ä»¶å®ç°æˆ‘ä»¬è‡ªå·±çš„å˜åŒ–æ£€æµ‹ç®—æ³•
      
      ngDoCheck and ngOnChanges should not be implemented together on the same component.
      
-     ngDoCheckºÍngOnChanges²»Ó¦¸ÃÔÚÍ¬Ò»¸ö×é¼şÉÏÒ»ÆğÊµÏÖ¡£
-   Îå¡¢ngOnDestroy
+     ngDoCheckå’ŒngOnChangesä¸åº”è¯¥åœ¨åŒä¸€ä¸ªç»„ä»¶ä¸Šä¸€èµ·å®ç°ã€‚
+   äº”ã€ngOnDestroy
      This method will be invoked just before Angular destroys the component.
      Use this hook to unsubscribe observables and detach event handlers to avoid memory leaks. 
    
-     Õâ¸ö·½·¨½«ÔÚAngularÏú»Ù×é¼şÖ®Ç°±»µ÷ÓÃ¡£
-     Ê¹ÓÃ´Ë¹Ò¹³È¡Ïû¶©ÔÄobservables²¢·ÖÀëÊÂ¼ş´¦Àí³ÌĞòÒÔ±ÜÃâÄÚ´æĞ¹Â©¡£
+     è¿™ä¸ªæ–¹æ³•å°†åœ¨Angularé”€æ¯ç»„ä»¶ä¹‹å‰è¢«è°ƒç”¨ã€‚
+     ä½¿ç”¨æ­¤æŒ‚é’©å–æ¶ˆè®¢é˜…observableså¹¶åˆ†ç¦»äº‹ä»¶å¤„ç†ç¨‹åºä»¥é¿å…å†…å­˜æ³„æ¼ã€‚
 
-×Ó×é¼ş¹³×Ó
+å­ç»„ä»¶é’©å­
    These hooks are only called for components and not directives.
-   ÕâĞ©¹³×ÓÖ»Õë¶Ô×é¼ş¶ø²»ÊÇÖ¸Áî¡£
-   
-
+   è¿™äº›é’©å­åªé’ˆå¯¹ç»„ä»¶è€Œä¸æ˜¯æŒ‡ä»¤ã€‚
+   ä¸€ã€ngAfterContentInit
+     Invoked after Angular performs any content projection into the components view
+     åœ¨Angularæ‰§è¡Œä»»ä½•å†…å®¹æŠ•å½±åˆ°ç»„ä»¶è§†å›¾ä¹‹åè°ƒç”¨
+   äºŒã€ngAfterContentChecked
+     Invoked each time the content of the given component has been checked by the change detection mechanism of Angular.
+     æ¯æ¬¡é€šè¿‡Angularçš„å˜åŒ–æ£€æµ‹æœºåˆ¶æ£€æŸ¥ç»™å®šç»„ä»¶çš„å†…å®¹æ—¶è°ƒç”¨ã€‚
+   ä¸‰ã€ngAfterViewInit
+     Invoked when the componentâ€™s view has been fully initialized
+     å½“ç»„ä»¶çš„è§†å›¾å·²å®Œå…¨åˆå§‹åŒ–æ—¶è°ƒç”¨
+   å››ã€ngAfterViewChecked
+     Invoked each time the view of the given component has been checked by the change detection mechanism of Angular.
+     æ¯æ¬¡é€šè¿‡Angularçš„å˜åŒ–æ£€æµ‹æœºåˆ¶æ£€æŸ¥ç»™å®šç»„ä»¶çš„è§†å›¾æ—¶è°ƒç”¨ã€‚
 
 
 
