@@ -1,0 +1,72 @@
+    constructor
+    ngChanges
+    ngOnInit
+    ngDoCheck
+      ngAfterContentInit
+      ngAfterContentChecked
+      ngAfterViewInit
+      ngAfterViewChecked
+    ngOnDestory
+
+   These phases are broadly split up into phases that
+   are linked to the component itself and phases that
+   are linked to the children of that component.
+   这些阶段大致分为链接到组件本身的阶段和链接到该组件子项的阶段。
+   
+
+组件钩子:
+   一、constructor
+
+   This is invoked when Angular creates a component or directive by calling new on the class.
+   当Angular通过在类上调用new来创建一个组件或指令时，会调用它。
+
+   二、ngOnChanges
+   Invoked every time there is a change in one of th input properties of the component.
+   每当组件的某个输入属性发生变化时调用。
+   
+   三、ngOnInit
+     Invoked when given component has been initialized.
+     This hook is only called once after the first ngOnChanges
+    
+     当给定组件被初始化时调用。
+     该钩子在第一个ngOnChanges之后仅被调用一次
+   四、ngDoCheck
+     Invoked when the change detector of the given component is invoked.
+     It allows us to implement our own change detection algorithm for the given component.
+     
+     当调用给定组件的变化检测器时调用。它允许我们为给定的组件实现我们自己的变化检测算法
+     
+     ngDoCheck and ngOnChanges should not be implemented together on the same component.
+     
+     ngDoCheck和ngOnChanges不应该在同一个组件上一起实现。
+   五、ngOnDestroy
+     This method will be invoked just before Angular destroys the component.
+     Use this hook to unsubscribe observables and detach event handlers to avoid memory leaks. 
+   
+     这个方法将在Angular销毁组件之前被调用。
+     使用此挂钩取消订阅observables并分离事件处理程序以避免内存泄漏。
+
+子组件钩子
+   These hooks are only called for components and not directives.
+   这些钩子只针对组件而不是指令。
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
